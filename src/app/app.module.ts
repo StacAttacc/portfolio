@@ -10,11 +10,16 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CharacterSheetProjectComponent } from './character-sheet-project/character-sheet-project.component';
 import { BioAndEmailComponent } from './about-page/bio-and-email/bio-and-email.component';
 import { ContactDialogFormComponent } from './about-page/contact-dialog-form/contact-dialog-form.component';
+import { StatsComponent } from './character-sheet-project/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,7 @@ import { ContactDialogFormComponent } from './about-page/contact-dialog-form/con
     CharacterSheetProjectComponent,
     BioAndEmailComponent,
     ContactDialogFormComponent,
+    StatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,10 @@ import { ContactDialogFormComponent } from './about-page/contact-dialog-form/con
     MatSidenavModule,
     MatGridListModule,
     MatDialogModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
