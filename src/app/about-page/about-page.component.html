@@ -1,28 +1,75 @@
-<p>
-  Sensini Valitiana,
-  (picture here)
-</p>
-
-<mat-grid-list cols="2">
-  <mat-grid-tile>
-    <div>
-      <p>
-        Technologies: c#, java, html, javascript, typescript, react, angular, python, SQL
-      </p>
-      <p>contact (popup component)</p>
+<mat-grid-list cols="2" rowHeight="2:1" class="profile-grid">
+  <!-- Profile Picture Tile -->
+  <mat-grid-tile class="profile-photo-tile">
+    <div class="photo-container mat-elevation-z4">
+      <img src="assets/profile-photo.jpg" alt="Sensini Valitiana" class="profile-photo">
     </div>
   </mat-grid-tile>
 
+  <!-- Personal Info Tile -->
   <mat-grid-tile>
-    <p>
-        I'm an aspiring full-stack developer.
-        I've had a passion for creating things since I was a kid
-        and that has led me to pursue a career in software development.
-        <br>
-        Resume available upon request.
-        <br>
-        s.valitiana at gmail.com
-      </p>
+    <div class="personal-info">
+      <h2 class="name-heading">Sensini Valitiana</h2>
+      <div class="info-item">
+        <mat-icon color="primary">person</mat-icon>
+        <span>Full Stack Developer</span>
+      </div>
+      <div class="info-item">
+        <mat-icon color="primary">cake</mat-icon>
+        <span>January 2, 2002</span>
+      </div>
+      <div class="info-item">
+        <mat-icon color="primary">email</mat-icon>
+        <span>s.valitiana&#64;gmail.com</span>
+      </div>
+    </div>
+  </mat-grid-tile>
 
+  <!-- Technologies Tile -->
+  <mat-grid-tile>
+    <div class="tech-stack">
+      <h3>Technical Expertise</h3>
+      <mat-chip-listbox>
+          <mat-chip color="primary" selected>C#</mat-chip>
+          <mat-chip color="primary" selected>Java</mat-chip>
+          <mat-chip color="primary" selected>TypeScript</mat-chip>
+
+          <mat-chip color="accent" selected>HTML5</mat-chip>
+          <mat-chip color="accent" selected>CSS3</mat-chip>
+          <mat-chip color="accent" selected>JavaScript</mat-chip>
+          <mat-chip color="accent" selected>Angular</mat-chip>
+          <mat-chip color="accent" selected>Angular Material</mat-chip>
+          <mat-chip color="accent" selected>Bootstrap</mat-chip>
+          <mat-chip color="accent" selected>React</mat-chip>
+
+          <mat-chip color="warn" selected>SQL Server</mat-chip>
+          <mat-chip color="warn" selected>Node.js</mat-chip>
+          <mat-chip color="warn" selected>.NET Core</mat-chip>
+
+          <mat-chip selected>Git</mat-chip>
+          <mat-chip selected>VS Code</mat-chip>
+          <mat-chip selected>Visual Studio</mat-chip>
+          <mat-chip selected>Swagger</mat-chip>
+
+          <mat-chip selected>JUnit</mat-chip>
+          <mat-chip selected>Mockito</mat-chip>
+
+      </mat-chip-listbox>
+    </div>
+  </mat-grid-tile>
+
+  <!-- Bio Tile -->
+  <mat-grid-tile>
+    <div class="bio-content">
+      <h3>About Me</h3>
+      <p class="bio-text">
+        I'm an aspiring full-stack developer with a lifelong passion for creation and innovation.
+        This creative drive has naturally led me to pursue a career in software development,
+        where I can bring ideas to life through code.
+      </p>
+      <p class="resume-note">
+        Resume available upon request at s.valitiana&#64;gmail.com
+      </p>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>

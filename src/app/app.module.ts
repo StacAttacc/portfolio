@@ -14,22 +14,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips'
 
 import { AboutPageComponent } from './about-page/about-page.component';
-import { CharacterSheetProjectComponent } from './character-sheet-project/character-sheet-project.component';
 import { BioAndEmailComponent } from './about-page/bio-and-email/bio-and-email.component';
 import { ContactDialogFormComponent } from './about-page/contact-dialog-form/contact-dialog-form.component';
-import { StatsComponent } from './character-sheet-project/stats/stats.component';
+import { PayrollComponentComponent } from './payroll-component/payroll-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     AboutPageComponent,
-    CharacterSheetProjectComponent,
     BioAndEmailComponent,
     ContactDialogFormComponent,
-    StatsComponent,
+    PayrollComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +42,9 @@ import { StatsComponent } from './character-sheet-project/stats/stats.component'
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
