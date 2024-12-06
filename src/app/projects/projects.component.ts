@@ -12,6 +12,10 @@ export class ProjectsComponent implements OnInit{
     .observe([Breakpoints.XSmall, Breakpoints.Small])
     .pipe(map(({ matches }) => matches ? 1 : 3));
 
+  rowHeight$ = this.breakpointObserver
+    .observe([Breakpoints.XSmall, Breakpoints.Small])
+    .pipe(map(({ matches }) => matches ? '250px' : '350px'));
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {}
