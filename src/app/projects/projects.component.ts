@@ -3,15 +3,16 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-about-page',
-  templateUrl: './about-page.component.html',
-  styleUrls: ['./about-page.component.css']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.css']
 })
-export class AboutPageComponent implements OnInit {
+export class ProjectsComponent implements OnInit{
   cols$ = this.breakpointObserver
-  .observe([Breakpoints.XSmall, Breakpoints.Small])
-  .pipe(map(({ matches }) => matches ? 1 : 2));
+    .observe([Breakpoints.XSmall, Breakpoints.Small])
+    .pipe(map(({ matches }) => matches ? 1 : 3));
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
   ngOnInit(): void {}
 }

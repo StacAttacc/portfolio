@@ -17,15 +17,18 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+
+import { NgIconsModule } from '@ng-icons/core';
+import { octLogoGithub, octMarkGithub } from '@ng-icons/octicons';
 
 import { FormsModule } from '@angular/forms';
 
 import { AboutPageComponent } from './about-page/about-page.component';
 import { BioAndEmailComponent } from './about-page/bio-and-email/bio-and-email.component';
-import { ContactDialogFormComponent } from './about-page/contact-dialog-form/contact-dialog-form.component';
-import { PayrollComponentComponent } from './payroll-component/payroll-component.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +36,7 @@ import { PayrollComponentComponent } from './payroll-component/payroll-component
     HomePageComponent,
     AboutPageComponent,
     BioAndEmailComponent,
-    ContactDialogFormComponent,
-    PayrollComponentComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,9 @@ import { PayrollComponentComponent } from './payroll-component/payroll-component
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule,
+    NgIconsModule.withIcons( {octLogoGithub, octMarkGithub })
   ],
   providers: [],
   bootstrap: [AppComponent]

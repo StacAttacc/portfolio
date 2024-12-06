@@ -1,0 +1,22 @@
+.project-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 90%;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-actions a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ng-icon {
+  vertical-align: middle;
+}

@@ -1,0 +1,51 @@
+<mat-grid-list [cols]="cols$ | async" rowHeight="200px">
+  <mat-grid-tile>
+    <mat-card class="project-card">
+      <mat-card-header>
+        <mat-card-title>Payroll Project</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>This is an application to help manage employee pay with taxes.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="https://github.com/StacAttacc/sensini-stage" target="_blank">
+          <ng-icon name="octMarkGithub" size="24" />
+          View on GitHub
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="project-card">
+      <mat-card-header>
+        <mat-card-title>Library Project</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>This is an application to help manage lending and returning documents in a library.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="https://github.com/StacAttacc/library-project" target="_blank">
+          <ng-icon name="octMarkGithub" size="24" />
+          View on GitHub
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="project-card">
+      <mat-card-header>
+        <mat-card-title>Bus Heatmap Project</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>This was a team project with the goal to show the frequency at which bus stops are visited in Montreal.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button href="https://github.com/StacAttacc/heatmap-project" target="_blank">
+          <ng-icon name="octMarkGithub" size="24" />
+          View on GitHub
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
