@@ -9,8 +9,19 @@ import { map } from 'rxjs/operators';
 })
 export class AboutPageComponent implements OnInit {
   cols$ = this.breakpointObserver
-  .observe([Breakpoints.XSmall, Breakpoints.Small])
-  .pipe(map(({ matches }) => matches ? 1 : 2));
+    .observe([Breakpoints.XSmall, Breakpoints.Small, Breakpoints.Medium])
+    .pipe(
+      map(({ breakpoints }) => {
+        if (breakpoints[Breakpoints.XSmall]) {
+          return 1;
+        } else if (breakpoints[Breakpoints.Small]) {
+          return 1;
+        } else if (breakpoints[Breakpoints.Medium]) {
+          return 2;
+        }
+        return 2;
+      })
+    );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
   ngOnInit(): void {}
