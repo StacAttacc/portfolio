@@ -21,6 +21,7 @@ const projects = allProjects.filter(p => p.isDeployed)
           <ProjectCard
             :title="project.title"
             :description="project.shortDescription"
+            :stack="project.stack"
             :link="project.liveLink"
             :github-link="project.githubLink"
           />

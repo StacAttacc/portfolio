@@ -1,9 +1,9 @@
 [
   {
     "title": "Prose",
-    "shortDescription": "5 person team project remaking André-Laurendeau's OSE platform.",
+    "shortDescription": "Internship management platform for students, employers, professors and coordinators. Post offers, manage applications, track student journeys.",
     "description": "",
-    "stack": [],
+    "stack": ["React", "Java", "Spring Boot", "PostgreSQL", "Docker"],
     "liveLink": "https://prose-jet.vercel.app",
     "githubLink": "https://github.com/StacAttacc/Prose",
     "isDeployed": true
@@ -12,7 +12,7 @@
     "title": "Marketing Tool",
     "shortDescription": "An application to manage, keep track and plan marketing budgets.",
     "description": "",
-    "stack": [],
+    "stack": ["Vue", "Nuxt", "TypeScript", "PostgreSQL", "Drizzle ORM", "Claude API"],
     "liveLink": "https://marketing-tool-one.vercel.app/",
     "githubLink": "https://github.com/StacAttacc/marketing-tool",
     "isDeployed": true
@@ -21,9 +21,18 @@
     "title": "Next Stitch",
     "shortDescription": "An application to manage your sewing projects.",
     "description": "",
-    "stack": [],
+    "stack": ["React", "Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Claude API"],
     "liveLink": "https://next-stitch-henna.vercel.app/",
     "githubLink": "https://github.com/StacAttacc/NextStitch",
     "isDeployed": true
+  },
+  {
+    "title": "Sewing Assistant",
+    "shortDescription": "An AI-powered assistant to help manage sewing projects.",
+    "description": "",
+    "stack": ["React", "TypeScript", "Python", "FastAPI", "Claude API"],
+    "liveLink": "",
+    "githubLink": "https://github.com/StacAttacc/SewingAssistant",
+    "isDeployed": false
   }
 ]
