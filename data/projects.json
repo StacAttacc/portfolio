@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Prose",
+    "shortDescription": "5 person team project remaking André-Laurendeau's OSE platform.",
+    "description": "",
+    "stack": [],
+    "liveLink": "https://prose-jet.vercel.app",
+    "githubLink": "https://github.com/StacAttacc/Prose",
+    "isDeployed": true
+  },
+  {
+    "title": "Marketing Tool",
+    "shortDescription": "An application to manage, keep track and plan marketing budgets.",
+    "description": "",
+    "stack": [],
+    "liveLink": "https://marketing-tool-one.vercel.app/",
+    "githubLink": "https://github.com/StacAttacc/marketing-tool",
+    "isDeployed": true
+  },
+  {
+    "title": "Next Stitch",
+    "shortDescription": "An application to manage your sewing projects.",
+    "description": "",
+    "stack": [],
+    "liveLink": "https://next-stitch-henna.vercel.app/",
+    "githubLink": "https://github.com/StacAttacc/NextStitch",
+    "isDeployed": true
+  }
+]
