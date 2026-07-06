@@ -16,8 +16,8 @@ const projects = allProjects.filter(p => p.isDeployed)
 
     <section>
       <h2 class="text-sm font-semibold uppercase tracking-widest text-base-content/50 mb-4">Deployed projects</h2>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <li v-for="project in projects" :key="project.title">
+      <ul class="columns-1 sm:columns-2 gap-4">
+        <li v-for="project in projects" :key="project.title" class="break-inside-avoid mb-4">
           <ProjectCard
             :title="project.title"
             :description="project.shortDescription"
