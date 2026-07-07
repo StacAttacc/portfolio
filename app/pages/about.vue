@@ -67,7 +67,7 @@
 const languages = ['TypeScript', 'JavaScript', 'Python', 'Java', 'C#', 'SQL']
 const frontend = ['React', 'Next.js', 'Vue', 'Nuxt', 'Angular', 'Tailwind CSS']
 const backend = ['Spring Boot', 'FastAPI', '.NET', 'Node.js']
-const databases = ['PostgreSQL', 'SQL Server']
+const databases = ['PostgreSQL', 'NeonDB', 'SQL Server']
 const infrastructure = ['NixOS', 'Kubernetes', 'Docker', 'Flux', 'Tailscale']
 const other = ['Drizzle ORM', 'Claude API', 'Git']
 </script>

@@ -40,8 +40,8 @@ const navItems = [
           <p class="text-sm text-base-content/60 mt-1 whitespace-nowrap">Full-stack web developer</p>
         </div>
         <nav class="flex-1">
-          <ul class="menu p-0 gap-1">
-            <li v-for="item in navItems" :key="item.to">
+          <ul class="menu p-0 gap-2">
+            <li v-for="item in navItems" :key="item.to" class="bg-base-100 rounded-lg shadow-md shadow-base-300">
               <NuxtLink
                 :to="item.to"
                 exact-active-class="active"
@@ -54,20 +54,20 @@ const navItems = [
             </li>
           </ul>
         </nav>
-        <ul class="menu p-0 gap-1">
-          <li>
+        <ul class="menu p-0 gap-2">
+          <li class="bg-base-100 rounded-lg shadow-md shadow-base-300">
             <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" aria-label="GitHub" class="tooltip tooltip-right text-base-content/50 hover:text-base-content" :data-tip="isExpanded ? undefined : 'GitHub'">
               <Github :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">GitHub</span>
             </a>
           </li>
-          <li>
+          <li class="bg-base-100 rounded-lg shadow-md shadow-base-300">
             <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" aria-label="LinkedIn" class="tooltip tooltip-right text-base-content/50 hover:text-base-content" :data-tip="isExpanded ? undefined : 'LinkedIn'">
               <Linkedin :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">LinkedIn</span>
             </a>
           </li>
-          <li>
+          <li class="bg-base-100 rounded-lg shadow-md shadow-base-300">
             <button aria-label="Copy email" class="tooltip tooltip-right text-base-content/50 hover:text-base-content w-full" :data-tip="isExpanded ? undefined : 'Copy email'" @click="copyEmail">
               <Mail :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">Copy email</span>
@@ -77,8 +77,8 @@ const navItems = [
       </div>
     </aside>
 
-    <div class="flex flex-col flex-1 h-full pb-16 md:pb-0 overflow-hidden">
-      <main class="flex-1 overflow-hidden p-6">
+    <div class="flex flex-col flex-1 h-full pb-12 lg:pb-6 md:pb-0 overflow-hidden">
+      <main class="flex-1 overflow-hidden p-6 sm:pb-0">
         <div class="bg-base-100 rounded-2xl h-full overflow-y-auto shadow-inner shadow-md shadow-base-300">
           <slot />
           <div class="md:hidden flex justify-center gap-6 text-sm text-base-content/60 px-8 py-8 border-t border-base-200">
@@ -91,12 +91,13 @@ const navItems = [
     </div>
   </div>
 
-  <nav class="dock dock-sm md:hidden z-50">
+  <nav class="dock dock-sm md:hidden z-50 bg-base-200 gap-2 px-2 border-0 pb-2">
     <NuxtLink
       v-for="item in navItems"
       :key="item.to"
       :to="item.to"
       exact-active-class="dock-active"
+      class="bg-base-100 rounded-lg shadow-md shadow-base-300"
     >
       <component :is="item.icon" :size="20" />
       <span class="dock-label">{{ item.label }}</span>
