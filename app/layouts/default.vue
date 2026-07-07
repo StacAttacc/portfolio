@@ -2,7 +2,12 @@
 import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail } from 'lucide-vue-next'
 
 const email = 's.valitiana@gmail.com'
-const copyEmail = () => navigator.clipboard.writeText(email)
+const isCopied = ref(false)
+const copyEmail = () => {
+  navigator.clipboard.writeText(email)
+  isCopied.value = true
+  setTimeout(() => { isCopied.value = false }, 6000)
+}
 
 useSeoMeta({
   title: 'Dev Portfolio — Full-stack web developer',
@@ -68,9 +73,9 @@ const navItems = [
             </a>
           </li>
           <li class="bg-base-100 rounded-lg shadow-md">
-            <button aria-label="Copy email" class="tooltip tooltip-right text-base-content w-full" :data-tip="isExpanded ? undefined : 'Copy email'" @click="copyEmail">
+            <button aria-label="Copy email" class="tooltip tooltip-right text-base-content w-full" :data-tip="isExpanded ? undefined : (isCopied ? 'Copied!' : 'Copy email')" @click="copyEmail">
               <Mail :size="18" />
-              <span v-show="isExpanded" class="whitespace-nowrap">Copy email</span>
+              <span v-show="isExpanded" class="whitespace-nowrap">{{ isCopied ? 'Copied!' : 'Copy email' }}</span>
             </button>
           </li>
         </ul>
@@ -84,7 +89,7 @@ const navItems = [
           <div class="md:hidden flex justify-center gap-6 text-sm text-base-content/60 px-8 py-8 border-t border-base-200">
             <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">GitHub</a>
             <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">LinkedIn</a>
-            <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ email }}</button>
+            <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ isCopied ? 'Copied!' : email }}</button>
           </div>
         </div>
       </main>

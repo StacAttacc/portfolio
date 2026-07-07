@@ -11,7 +11,7 @@ const projects = allProjects.filter(p => p.isDeployed)
       <h1 class="text-3xl font-bold">Hi, I'm AV</h1>
       <p class="text-base-content/70 mt-2">Full-stack web developer</p>
       <p class="mt-4 text-base-content/80 leading-relaxed">
-        CS graduate from André-Laurendeau. I've built everything from internship management platforms and budget tools to a Kubernetes homelab.
+        CS grad from André-Laurendeau. I build things I actually use — web apps that go on Vercel, services that run on my self-hosted Kubernetes cluster, and everything in between.
       </p>
     </div>
 
