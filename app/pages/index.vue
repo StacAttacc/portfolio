@@ -2,6 +2,7 @@
 import allProjects from '~~/data/projects.json'
 
 const projects = allProjects.filter(p => p.isDeployed)
+
 </script>
 
 <template>

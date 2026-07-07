@@ -4,6 +4,13 @@ import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedi
 const email = 's.valitiana@gmail.com'
 const copyEmail = () => navigator.clipboard.writeText(email)
 
+useSeoMeta({
+  title: 'Dev Portfolio — Full-stack web developer',
+  description: 'A collection of web projects spanning frontend, backend, and infrastructure.',
+  ogTitle: 'Dev Portfolio — Full-stack web developer',
+  ogDescription: 'A collection of web projects spanning frontend, backend, and infrastructure.',
+})
+
 const isExpanded = ref(false)
 
 const navItems = [
@@ -74,6 +81,11 @@ const navItems = [
       <main class="flex-1 overflow-hidden p-6">
         <div class="bg-base-100 rounded-2xl h-full overflow-y-auto shadow-inner shadow-md shadow-base-300">
           <slot />
+          <div class="md:hidden flex justify-center gap-6 text-sm text-base-content/60 px-8 py-8 border-t border-base-200">
+            <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">LinkedIn</a>
+            <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ email }}</button>
+          </div>
         </div>
       </main>
     </div>
