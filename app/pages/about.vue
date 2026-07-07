@@ -2,7 +2,7 @@
   <div class="w-full max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-8 py-12">
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-bold">About me</h1>
-      <a href="/cv.pdf" download class="btn btn-primary btn-sm">Download CV</a>
+      <a href="/cv.pdf" download class="bg-base-100 rounded-lg shadow-md px-4 py-2 text-sm font-medium hover:bg-base-200 transition-colors">Download CV</a>
     </div>
 
     <div class="space-y-3 text-base-content/80 leading-relaxed mb-12">

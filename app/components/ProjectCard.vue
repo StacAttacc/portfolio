@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-base-100 text-base-content border border-base-300 rounded-xl shadow-sm hover:shadow-base-200/50 p-4 group">
+  <div class="bg-base-100 text-base-content border border-base-300 rounded-xl shadow-sm hover:shadow-base-200/50 hover:bg-base-300/50 p-4 group transition-colors">
     <div class="flex items-start justify-between gap-2">
       <h2 class="font-semibold text-lg">{{ title }}</h2>
       <span v-if="isDeployed" class="badge badge-success badge-sm shrink-0 mt-1">Deployed</span>
