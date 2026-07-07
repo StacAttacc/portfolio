@@ -5,7 +5,7 @@ const projects = allProjects.filter(p => p.isDeployed)
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto px-8 py-12">
+  <div class="w-full max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-8 py-12">
     <div class="mb-12">
       <h1 class="text-3xl font-bold">Hi, I'm AV</h1>
       <p class="text-base-content/70 mt-2">Full-stack web developer</p>
@@ -16,7 +16,7 @@ const projects = allProjects.filter(p => p.isDeployed)
 
     <section>
       <h2 class="text-sm font-semibold uppercase tracking-widest text-base-content/50 mb-4">Deployed projects</h2>
-      <ul class="columns-1 sm:columns-2 gap-4">
+      <ul class="columns-1 sm:columns-2 lg:columns-3 gap-4">
         <li v-for="project in projects" :key="project.title" class="break-inside-avoid mb-4">
           <ProjectCard
             :title="project.title"
