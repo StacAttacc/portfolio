@@ -21,7 +21,7 @@ defineProps<{
     <div v-if="stack?.length" class="mt-3 flex flex-wrap gap-1">
       <span v-for="tech in stack" :key="tech" class="badge badge-outline badge-sm">{{ tech }}</span>
     </div>
-    <div class="mt-3 flex gap-3 justify-end">
+    <div class="mt-3 flex items-center">
       <a
         v-if="githubLink"
         :href="githubLink"
@@ -38,9 +38,10 @@ defineProps<{
         target="_blank"
         rel="noopener"
         aria-label="Live site"
-        class="text-base-content/50 hover:text-base-content group-hover:text-success transition-colors"
+        class="ml-auto flex items-center gap-1 text-base-content/50 hover:text-base-content group-hover:text-success transition-colors"
       >
         <Play :size="18" />
+        <span class="text-sm">Live</span>
       </a>
     </div>
   </div>
