@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Github, Play } from '@lucide/vue'
+import { Play } from '@lucide/vue'
 
 const { t } = useLocale()
 
@@ -32,7 +32,7 @@ defineProps<{
         aria-label="GitHub"
         class="text-base-content/50 hover:text-base-content group-hover:text-success transition-colors"
       >
-        <Github :size="18" />
+        <GithubIcon :size="18" />
       </a>
       <a
         v-if="link"

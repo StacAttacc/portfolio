@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages, Sun, Moon } from '@lucide/vue'
+import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Mail, Languages, Sun, Moon } from '@lucide/vue'
 
 const { locale, t, toggleLocale } = useLocale()
 const { theme, toggleTheme } = useTheme()
@@ -102,13 +102,13 @@ const navItems = [
         <ul class="menu p-0 gap-2">
           <li class="bg-base-100 rounded-lg shadow-md">
             <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" aria-label="GitHub" class="w-full tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'GitHub'">
-              <Github :size="18" />
+              <GithubIcon :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">GitHub</span>
             </a>
           </li>
           <li class="bg-base-100 rounded-lg shadow-md">
             <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-full tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'LinkedIn'">
-              <Linkedin :size="18" />
+              <LinkedinIcon :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">LinkedIn</span>
             </a>
           </li>
