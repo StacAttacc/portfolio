@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages } from 'lucide-vue-next'
+import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages, Sun, Moon } from 'lucide-vue-next'
 
 const { locale, t, toggleLocale } = useLocale()
-
-useHead({
-  htmlAttrs: { lang: computed(() => locale.value) },
-  link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-})
-
-useSeoMeta({ ogImage: '/og-image.svg' })
+const { theme, toggleTheme } = useTheme()
 
 const email = 's.valitiana@gmail.com'
 const isCopied = ref(false)
@@ -18,11 +12,20 @@ const copyEmail = () => {
   setTimeout(() => { isCopied.value = false }, 6000)
 }
 
+useHead({
+  htmlAttrs: {
+    lang: computed(() => locale.value),
+    'data-theme': computed(() => theme.value),
+  },
+  link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+})
+
 useSeoMeta({
   title: computed(() => t('home.meta.title')),
   description: computed(() => t('home.meta.description')),
   ogTitle: computed(() => t('home.meta.title')),
   ogDescription: computed(() => t('home.meta.description')),
+  ogImage: '/og-image.png',
 })
 
 const isExpanded = ref(false)
@@ -53,23 +56,13 @@ const navItems = [
           <p class="text-xl font-bold whitespace-nowrap">Sensini Valitiana</p>
           <p class="text-sm text-base-content/60 mt-1 whitespace-nowrap">{{ t('sidebar.tagline') }}</p>
         </div>
-        <nav class="flex-1">
+        <nav>
           <ul class="menu p-0 gap-2">
-            <li class="bg-base-100 rounded-lg shadow-md">
-              <button
-                class="w-full tooltip tooltip-right"
-                :class="!isExpanded && 'tooltip tooltip-right'"
-                :data-tip="!isExpanded ? t('locale.switch') : undefined"
-                @click="toggleLocale"
-              >
-                <Languages :size="18" />
-                <span v-show="isExpanded" class="whitespace-nowrap">{{ t('locale.switch') }}</span>
-              </button>
-            </li>
             <li v-for="item in navItems" :key="item.to" class="bg-base-100 rounded-lg shadow-md">
               <NuxtLink
                 :to="item.to"
                 exact-active-class="active"
+                class="w-full"
                 :class="!isExpanded && 'tooltip tooltip-right'"
                 :data-tip="!isExpanded ? t(item.key) : undefined"
               >
@@ -79,15 +72,42 @@ const navItems = [
             </li>
           </ul>
         </nav>
+
+        <div class="flex-1 flex flex-col">
+          <hr class="border-t border-base-300/50" />
+        <ul class="menu p-0 gap-2 my-auto">
+          <li class="bg-base-100 rounded-lg shadow-md">
+            <button
+              class="w-full tooltip tooltip-right text-base-content"
+              :data-tip="!isExpanded ? (theme === 'dark' ? 'Light mode' : 'Dark mode') : undefined"
+              @click="toggleTheme"
+            >
+              <component :is="theme === 'dark' ? Sun : Moon" :size="18" />
+              <span v-show="isExpanded" class="whitespace-nowrap">{{ theme === 'dark' ? 'Light' : 'Dark' }}</span>
+            </button>
+          </li>
+          <li class="bg-base-100 rounded-lg shadow-md">
+            <button
+              class="w-full tooltip tooltip-right text-base-content"
+              :data-tip="!isExpanded ? t('locale.switch') : undefined"
+              @click="toggleLocale"
+            >
+              <Languages :size="18" />
+              <span v-show="isExpanded" class="whitespace-nowrap">{{ t('locale.switch') }}</span>
+            </button>
+          </li>
+        </ul>
+        </div>
+
         <ul class="menu p-0 gap-2">
           <li class="bg-base-100 rounded-lg shadow-md">
-            <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" aria-label="GitHub" class="tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'GitHub'">
+            <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" aria-label="GitHub" class="w-full tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'GitHub'">
               <Github :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">GitHub</span>
             </a>
           </li>
           <li class="bg-base-100 rounded-lg shadow-md">
-            <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" aria-label="LinkedIn" class="tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'LinkedIn'">
+            <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-full tooltip tooltip-right text-base-content" :data-tip="isExpanded ? undefined : 'LinkedIn'">
               <Linkedin :size="18" />
               <span v-show="isExpanded" class="whitespace-nowrap">LinkedIn</span>
             </a>
@@ -103,14 +123,25 @@ const navItems = [
     </aside>
 
     <div class="flex flex-col flex-1 min-h-0 h-full pb-12 lg:pb-6 md:pb-0">
-      <main class="flex-1 min-h-0 p-6 md:pb-0">
+      <main class="flex-1 min-h-0 p-6 md:pb-0 relative">
+        <button
+          class="md:hidden absolute top-9 left-9 z-10 bg-base-100 rounded-lg shadow-md p-2 text-base-content"
+          @click="toggleTheme"
+        >
+          <component :is="theme === 'dark' ? Sun : Moon" :size="18" />
+        </button>
+        <button
+          class="md:hidden absolute top-9 right-9 z-10 bg-base-100 rounded-lg shadow-md p-2 text-base-content"
+          @click="toggleLocale"
+        >
+          <Languages :size="18" />
+        </button>
         <div class="bg-base-100 rounded-2xl h-full overflow-y-auto shadow-md">
           <slot />
           <div class="md:hidden flex justify-center gap-6 text-sm text-base-content/60 px-8 py-8 border-t border-base-200">
             <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">GitHub</a>
             <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">LinkedIn</a>
             <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ isCopied ? t('social.copied') : email }}</button>
-            <button class="hover:text-base-content transition-colors cursor-pointer" @click="toggleLocale">{{ t('locale.switch') }}</button>
           </div>
         </div>
       </main>

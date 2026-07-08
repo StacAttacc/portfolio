@@ -52,4 +52,9 @@ export default {
     },
   },
   card: { visit: 'Visiter' },
+  notFound: {
+    title: 'Page introuvable',
+    message: 'Cette page n\'existe pas ou a été déplacée.',
+    home: 'Retour à l\'accueil',
+  },
 }

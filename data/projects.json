@@ -34,10 +34,10 @@
   },
   {
     "title": "Payroll",
-    "shortDescription": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. to replace QuickBooks.",
-    "shortDescriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. pour remplacer QuickBooks.",
-    "description": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. Designed to replace QuickBooks for managing employee payroll and taxes in-house. Built with a C# .NET backend, an Angular frontend, and SQL Server as the database.",
-    "descriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. Conçu pour remplacer QuickBooks dans la gestion de la paie des employés et des taxes en interne. Développé avec un backend C# .NET, un frontend Angular et SQL Server comme base de données.",
+    "shortDescription": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. to replace QuickBooks. Handles tax calculations and tracks every payment: who was paid, when, and how much.",
+    "shortDescriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. pour remplacer QuickBooks. Gère les calculs de taxes et trace chaque paiement : qui a été payé, quand et combien.",
+    "description": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. Designed to replace QuickBooks for managing employee payroll in-house. Handles tax calculations and keeps a full payment history, logging each pay run with the employee, date, and amount. Built with a C# .NET backend, an Angular frontend, and SQL Server as the database.",
+    "descriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. Conçu pour remplacer QuickBooks dans la gestion de la paie en interne. Gère les calculs de taxes et conserve un historique complet des paiements, enregistrant chaque versement avec l'employé, la date et le montant. Développé avec un backend C# .NET, un frontend Angular et SQL Server comme base de données.",
     "stack": ["Angular", "TypeScript", "C#", ".NET", "SQL Server"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/payroll",
@@ -47,8 +47,8 @@
     "title": "AO3 Wrapped",
     "shortDescription": "A Spotify Wrapped-style year-in-review app for Archive of Our Own reading history.",
     "shortDescriptionFr": "Une application de récapitulatif annuel style Spotify Wrapped pour l'historique de lecture sur Archive of Our Own.",
-    "description": "An open source Spotify Wrapped-style recap app for Archive of Our Own. Readers can see their year in reading stats, top fandoms, most-read authors, and more. Currently built with React and Django, with a planned migration to Nuxt or Next.js for simpler Vercel deployment. In progress.",
-    "descriptionFr": "Une application de récapitulatif open source style Spotify Wrapped pour Archive of Our Own. Les lecteurs peuvent voir leurs statistiques de lecture annuelles, leurs fandoms favoris, leurs auteurs les plus lus, et plus encore. Actuellement développée avec React et Django, avec une migration prévue vers Nuxt ou Next.js. En cours.",
+    "description": "In progress. An open source Spotify Wrapped-style recap app for Archive of Our Own. Readers can see their year in reading stats, top fandoms, most-read authors, and more. Currently built with React and Django, with a planned migration to Nuxt or Next.js for simpler Vercel deployment.",
+    "descriptionFr": "En cours. Une application de récapitulatif open source style Spotify Wrapped pour Archive of Our Own. Les lecteurs peuvent voir leurs statistiques de lecture annuelles, leurs fandoms favoris, leurs auteurs les plus lus, et plus encore. Actuellement développée avec React et Django, avec une migration prévue vers Nuxt ou Next.js.",
     "stack": ["React", "Django", "Python"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/ao3-wrapped",
@@ -65,15 +65,4 @@
     "githubLink": "https://github.com/StacAttacc/BiggerWorld",
     "isDeployed": true
   },
-  {
-    "title": "Sewing Assistant",
-    "shortDescription": "Single-user sewing project manager for local use. Plan patterns and materials, track progress with photos and checklists, manage measurements, generate patterns with Claude, and find nearby fabric stores.",
-    "shortDescriptionFr": "Gestionnaire de projets de couture mono-utilisateur pour usage local. Planifiez les patrons et matériaux, suivez la progression avec photos et listes de contrôle, gérez les mesures, générez des patrons avec Claude et trouvez les magasins de tissus à proximité.",
-    "description": "The original implementation of Next Stitch, built as a solo class project that ended up being something I genuinely use day to day. Same feature set: multi-garment projects, pattern and material management, progress tracking with photos and checklists, and FreeSewing-inspired measurement sets. Built as a personal tool so there is no multi-user authentication.",
-    "descriptionFr": "L'implémentation originale de Next Stitch, construite comme un projet solo de classe qui s'est avéré être quelque chose que j'utilise vraiment au quotidien. Même ensemble de fonctionnalités : projets multi-vêtements, gestion des patrons et matériaux, suivi de la progression avec photos et listes de contrôle, et ensembles de mesures inspirés de FreeSewing. Conçu comme un outil personnel, il n'y a pas d'authentification multi-utilisateurs.",
-    "stack": ["React", "TypeScript", "Python", "FastAPI", "Claude API"],
-    "liveLink": "",
-    "githubLink": "https://github.com/StacAttacc/SewingAssistant",
-    "isDeployed": false
-  }
 ]
