@@ -122,7 +122,7 @@ const navItems = [
       </div>
     </aside>
 
-    <div class="flex flex-col flex-1 min-h-0 h-full pb-12 lg:pb-6 md:pb-0">
+    <div class="flex flex-col flex-1 min-h-0 pb-12 lg:pb-6 md:pb-0">
       <main class="flex-1 min-h-0 p-6 md:pb-0 relative">
         <button
           class="md:hidden absolute top-9 left-9 z-10 bg-base-100 rounded-lg shadow-md p-2 text-base-content"
