@@ -3,6 +3,13 @@ import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedi
 
 const { locale, t, toggleLocale } = useLocale()
 
+useHead({
+  htmlAttrs: { lang: computed(() => locale.value) },
+  link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+})
+
+useSeoMeta({ ogImage: '/og-image.svg' })
+
 const email = 's.valitiana@gmail.com'
 const isCopied = ref(false)
 const copyEmail = () => {
@@ -43,7 +50,7 @@ const navItems = [
           <component :is="isExpanded ? PanelLeftClose : PanelLeftOpen" :size="18" />
         </button>
         <div v-show="isExpanded" class="px-2">
-          <p class="text-xl font-bold whitespace-nowrap">AV</p>
+          <p class="text-xl font-bold whitespace-nowrap">Sensini Valitiana</p>
           <p class="text-sm text-base-content/60 mt-1 whitespace-nowrap">{{ t('sidebar.tagline') }}</p>
         </div>
         <nav class="flex-1">

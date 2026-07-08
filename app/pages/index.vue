@@ -25,7 +25,7 @@ const projects = computed(() =>
     <div class="mb-12">
       <h1 class="text-3xl font-bold">{{ t('home.greeting') }}</h1>
       <p class="text-base-content/70 mt-2">{{ t('home.tagline') }}</p>
-      <p class="mt-4 text-base-content/80 leading-relaxed">{{ t('home.bio') }}</p>
+      <p class="mt-4 text-base-content/80 leading-relaxed text-justify">{{ t('home.bio') }}</p>
     </div>
 
     <section>

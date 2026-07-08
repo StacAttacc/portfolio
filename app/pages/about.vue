@@ -23,7 +23,7 @@ const other = ['Drizzle ORM', 'Claude API', 'Git']
       <a :href="t('about.cvFile')" download class="bg-base-100 rounded-lg shadow-md px-4 py-2 text-sm font-medium hover:bg-base-200 transition-colors">{{ t('about.downloadCv') }}</a>
     </div>
 
-    <div class="space-y-3 text-base-content/80 leading-relaxed mb-12">
+    <div class="space-y-3 text-base-content/80 leading-relaxed mb-12 text-justify">
       <p>{{ t('about.bio.p1') }}</p>
       <p>{{ t('about.bio.p2') }}</p>
       <p>{{ t('about.bio.p3') }}</p>
