@@ -2,7 +2,9 @@
   {
     "title": "Prose",
     "shortDescription": "Internship management platform for students, employers, professors and coordinators. Post offers, manage applications, track student journeys.",
+    "shortDescriptionFr": "Plateforme de gestion des stages pour étudiants, employeurs, professeurs et coordinateurs. Publiez des offres, gérez les candidatures, suivez le parcours des étudiants.",
     "description": "A 5-person team project built over 6 weekly sprints for our software development class. We rebuilt OSE, our cegep's infamously clunky internship management platform, from the ground up. Students can browse and apply to offers, employers post positions, and coordinators and professors manage and track students throughout their internship journey.",
+    "descriptionFr": "Un projet d'équipe de 5 personnes réalisé sur 6 sprints hebdomadaires dans le cadre de notre cours de développement logiciel. Nous avons reconstruit OSE, la tristement célèbre plateforme de gestion des stages de notre cégep, de zéro. Les étudiants peuvent parcourir les offres et postuler, les employeurs publient des postes, et les coordinateurs et professeurs gèrent et suivent les étudiants tout au long de leur parcours de stage.",
     "stack": ["React", "Java", "Spring Boot", "PostgreSQL", "Docker"],
     "liveLink": "https://prose-jet.vercel.app",
     "githubLink": "https://github.com/StacAttacc/Prose",
@@ -11,7 +13,9 @@
   {
     "title": "Marketing Tool",
     "shortDescription": "Marketing budget manager for tracking quarterly spending, revenue and user growth. Log ad campaigns, visualize data through charts and dashboards, predict future budgets from past results, and manage data through a Claude-powered chatbot.",
+    "shortDescriptionFr": "Gestionnaire de budget marketing pour le suivi des dépenses trimestrielles, des revenus et de la croissance. Enregistrez des campagnes pub, visualisez les données avec des graphiques et tableaux de bord, prédisez les budgets futurs et gérez vos données via un chatbot Claude.",
     "description": "Budget management tool built during an internship at Enjoy Social. Input quarterly budgets, ad campaigns, and day-to-day spending and revenue. Data is viewable in a table or a dashboard with charts and cards designed with colorblind-friendly palettes. A separate page uses past budget data to forecast future quarters, and a Claude-powered chatbot is available for those who prefer a conversational interface.",
+    "descriptionFr": "Outil de gestion budgétaire développé lors d'un stage chez Enjoy Social. Saisissez les budgets trimestriels, les campagnes publicitaires et les dépenses et revenus quotidiens. Les données sont consultables sous forme de tableau ou de tableau de bord avec graphiques et cartes conçus avec des palettes adaptées aux personnes daltoniennes. Une page distincte utilise les données budgétaires passées pour prévoir les trimestres futurs, et un chatbot propulsé par Claude est disponible pour ceux qui préfèrent une interface conversationnelle.",
     "stack": ["Vue", "Nuxt", "TypeScript", "NeonDB", "Drizzle ORM", "Claude API"],
     "liveLink": "https://marketing-tool-one.vercel.app/",
     "githubLink": "https://github.com/StacAttacc/marketing-tool",
@@ -20,7 +24,9 @@
   {
     "title": "Next Stitch",
     "shortDescription": "Sewing project manager for individuals and groups. Plan patterns and materials, track progress with photos and checklists, manage measurements, generate patterns with Claude, and find nearby fabric stores.",
+    "shortDescriptionFr": "Gestionnaire de projets de couture pour particuliers et groupes. Planifiez les patrons et matériaux, suivez la progression avec photos et listes de contrôle, gérez les mesures, générez des patrons avec Claude et trouvez les magasins de tissus à proximité.",
     "description": "A sewing project manager built to make keeping track of my own sewing projects easier, later reimplemented from Sewing Assistant with a different stack. Each project supports multiple garments, so you can track outfits for a whole team in one place. Patterns can be uploaded, scraped from the web, or generated with the Claude API. Materials follow the same flow minus the generation. Progress is tracked through photos and checklists, and measurements are managed in reusable FreeSewing-inspired measurement sets.",
+    "descriptionFr": "Un gestionnaire de projets de couture construit pour faciliter le suivi de mes propres projets de couture, réimplémenté depuis Sewing Assistant avec une pile technique différente. Chaque projet prend en charge plusieurs vêtements, vous pouvez donc suivre les tenues d'une équipe entière au même endroit. Les patrons peuvent être téléchargés, extraits du web ou générés avec l'API Claude. La progression est suivie via des photos et des listes de contrôle, et les mesures sont gérées dans des ensembles réutilisables inspirés de FreeSewing.",
     "stack": ["React", "Next.js", "TypeScript", "NeonDB", "Drizzle ORM", "Claude API"],
     "liveLink": "https://next-stitch-henna.vercel.app/",
     "githubLink": "https://github.com/StacAttacc/NextStitch",
@@ -29,7 +35,9 @@
   {
     "title": "Payroll",
     "shortDescription": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. to replace QuickBooks.",
+    "shortDescriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. pour remplacer QuickBooks.",
     "description": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. Designed to replace QuickBooks for managing employee payroll and taxes in-house. Built with a C# .NET backend, an Angular frontend, and SQL Server as the database.",
+    "descriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. Conçu pour remplacer QuickBooks dans la gestion de la paie des employés et des taxes en interne. Développé avec un backend C# .NET, un frontend Angular et SQL Server comme base de données.",
     "stack": ["Angular", "TypeScript", "C#", ".NET", "SQL Server"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/payroll",
@@ -38,7 +46,9 @@
   {
     "title": "AO3 Wrapped",
     "shortDescription": "A Spotify Wrapped-style year-in-review app for Archive of Our Own reading history.",
+    "shortDescriptionFr": "Une application de récapitulatif annuel style Spotify Wrapped pour l'historique de lecture sur Archive of Our Own.",
     "description": "An open source Spotify Wrapped-style recap app for Archive of Our Own. Readers can see their year in reading stats, top fandoms, most-read authors, and more. Currently built with React and Django, with a planned migration to Nuxt or Next.js for simpler Vercel deployment. In progress.",
+    "descriptionFr": "Une application de récapitulatif open source style Spotify Wrapped pour Archive of Our Own. Les lecteurs peuvent voir leurs statistiques de lecture annuelles, leurs fandoms favoris, leurs auteurs les plus lus, et plus encore. Actuellement développée avec React et Django, avec une migration prévue vers Nuxt ou Next.js. En cours.",
     "stack": ["React", "Django", "Python"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/ao3-wrapped",
@@ -47,7 +57,9 @@
   {
     "title": "BiggerWorld",
     "shortDescription": "A personal homelab cluster built from spare hardware. Every host declared in a Nix flake, every workload delivered by Flux, every secret encrypted with SOPS.",
+    "shortDescriptionFr": "Un homelab Kubernetes personnel construit à partir de matériel de récupération. Chaque hôte déclaré dans un Nix flake, chaque workload livré par Flux, chaque secret chiffré avec SOPS.",
     "description": "A NixOS + k3s homelab built from spare and second-hand hardware while teaching myself what infrastructure actually looks like under the hood. Every host is declared in a Nix flake with home-manager, deployed remotely via colmena. The k3s cluster runs a GitOps workflow through Flux with SOPS-encrypted secrets, Vault for runtime secrets via external-secrets-operator, and Authentik for SSO across all self-hosted services. Most services are tailnet-only, with the Prose backend publicly exposed via Tailscale Funnel.",
+    "descriptionFr": "Un homelab NixOS + k3s construit à partir de matériel de récupération en apprenant ce qu'est réellement l'infrastructure sous le capot. Chaque hôte est déclaré dans un Nix flake avec home-manager, déployé à distance via colmena. Le cluster k3s exécute un workflow GitOps via Flux avec des secrets chiffrés SOPS, Vault pour les secrets d'exécution via external-secrets-operator, et Authentik pour le SSO sur tous les services auto-hébergés. La plupart des services sont accessibles uniquement via le tailnet, avec le backend de Prose exposé publiquement via Tailscale Funnel.",
     "stack": ["NixOS", "k3s", "Flux", "SOPS", "Vault", "Authentik", "Tailscale", "Grafana"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/BiggerWorld",
@@ -56,7 +68,9 @@
   {
     "title": "Sewing Assistant",
     "shortDescription": "Single-user sewing project manager for local use. Plan patterns and materials, track progress with photos and checklists, manage measurements, generate patterns with Claude, and find nearby fabric stores.",
+    "shortDescriptionFr": "Gestionnaire de projets de couture mono-utilisateur pour usage local. Planifiez les patrons et matériaux, suivez la progression avec photos et listes de contrôle, gérez les mesures, générez des patrons avec Claude et trouvez les magasins de tissus à proximité.",
     "description": "The original implementation of Next Stitch, built as a solo class project that ended up being something I genuinely use day to day. Same feature set: multi-garment projects, pattern and material management, progress tracking with photos and checklists, and FreeSewing-inspired measurement sets. Built as a personal tool so there is no multi-user authentication.",
+    "descriptionFr": "L'implémentation originale de Next Stitch, construite comme un projet solo de classe qui s'est avéré être quelque chose que j'utilise vraiment au quotidien. Même ensemble de fonctionnalités : projets multi-vêtements, gestion des patrons et matériaux, suivi de la progression avec photos et listes de contrôle, et ensembles de mesures inspirés de FreeSewing. Conçu comme un outil personnel, il n'y a pas d'authentification multi-utilisateurs.",
     "stack": ["React", "TypeScript", "Python", "FastAPI", "Claude API"],
     "liveLink": "",
     "githubLink": "https://github.com/StacAttacc/SewingAssistant",

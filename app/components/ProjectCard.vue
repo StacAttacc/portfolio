@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Github, Play } from 'lucide-vue-next'
 
+const { t } = useLocale()
+
 defineProps<{
   title: string
   description?: string
@@ -41,7 +43,7 @@ defineProps<{
         class="ml-auto flex items-center gap-1 text-base-content/50 hover:text-base-content group-hover:text-success transition-colors"
       >
         <Play :size="18" />
-        <span class="text-sm">Visit</span>
+        <span class="text-sm">{{ t('card.visit') }}</span>
       </a>
     </div>
   </div>

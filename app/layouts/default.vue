@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail } from 'lucide-vue-next'
+import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages } from 'lucide-vue-next'
+
+const { locale, t, toggleLocale } = useLocale()
 
 const email = 's.valitiana@gmail.com'
 const isCopied = ref(false)
@@ -10,18 +12,18 @@ const copyEmail = () => {
 }
 
 useSeoMeta({
-  title: 'Dev Portfolio — Full-stack web developer',
-  description: 'A collection of web projects spanning frontend, backend, and infrastructure.',
-  ogTitle: 'Dev Portfolio — Full-stack web developer',
-  ogDescription: 'A collection of web projects spanning frontend, backend, and infrastructure.',
+  title: computed(() => t('home.meta.title')),
+  description: computed(() => t('home.meta.description')),
+  ogTitle: computed(() => t('home.meta.title')),
+  ogDescription: computed(() => t('home.meta.description')),
 })
 
 const isExpanded = ref(false)
 
 const navItems = [
-  { label: 'Home', to: '/', icon: House },
-  { label: 'About', to: '/about', icon: User },
-  { label: 'Projects', to: '/projects', icon: FolderOpen },
+  { key: 'nav.home', to: '/', icon: House },
+  { key: 'nav.about', to: '/about', icon: User },
+  { key: 'nav.projects', to: '/projects', icon: FolderOpen },
 ]
 </script>
 
@@ -42,19 +44,30 @@ const navItems = [
         </button>
         <div v-show="isExpanded" class="px-2">
           <p class="text-xl font-bold whitespace-nowrap">AV</p>
-          <p class="text-sm text-base-content/60 mt-1 whitespace-nowrap">Full-stack web developer</p>
+          <p class="text-sm text-base-content/60 mt-1 whitespace-nowrap">{{ t('sidebar.tagline') }}</p>
         </div>
         <nav class="flex-1">
           <ul class="menu p-0 gap-2">
+            <li class="bg-base-100 rounded-lg shadow-md">
+              <button
+                class="w-full tooltip tooltip-right"
+                :class="!isExpanded && 'tooltip tooltip-right'"
+                :data-tip="!isExpanded ? t('locale.switch') : undefined"
+                @click="toggleLocale"
+              >
+                <Languages :size="18" />
+                <span v-show="isExpanded" class="whitespace-nowrap">{{ t('locale.switch') }}</span>
+              </button>
+            </li>
             <li v-for="item in navItems" :key="item.to" class="bg-base-100 rounded-lg shadow-md">
               <NuxtLink
                 :to="item.to"
                 exact-active-class="active"
                 :class="!isExpanded && 'tooltip tooltip-right'"
-                :data-tip="!isExpanded ? item.label : undefined"
+                :data-tip="!isExpanded ? t(item.key) : undefined"
               >
                 <component :is="item.icon" :size="18" />
-                <span v-show="isExpanded" class="whitespace-nowrap">{{ item.label }}</span>
+                <span v-show="isExpanded" class="whitespace-nowrap">{{ t(item.key) }}</span>
               </NuxtLink>
             </li>
           </ul>
@@ -73,9 +86,9 @@ const navItems = [
             </a>
           </li>
           <li class="bg-base-100 rounded-lg shadow-md">
-            <button aria-label="Copy email" class="tooltip tooltip-right text-base-content w-full" :data-tip="isExpanded ? undefined : (isCopied ? 'Copied!' : 'Copy email')" @click="copyEmail">
+            <button aria-label="Copy email" class="tooltip tooltip-right text-base-content w-full" :data-tip="isExpanded ? undefined : (isCopied ? t('social.copied') : t('social.copyEmail'))" @click="copyEmail">
               <Mail :size="18" />
-              <span v-show="isExpanded" class="whitespace-nowrap">{{ isCopied ? 'Copied!' : 'Copy email' }}</span>
+              <span v-show="isExpanded" class="whitespace-nowrap">{{ isCopied ? t('social.copied') : t('social.copyEmail') }}</span>
             </button>
           </li>
         </ul>
@@ -89,7 +102,8 @@ const navItems = [
           <div class="md:hidden flex justify-center gap-6 text-sm text-base-content/60 px-8 py-8 border-t border-base-200">
             <a href="https://github.com/StacAttacc" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">GitHub</a>
             <a href="https://linkedin.com/in/sensini-valitiana-506691383" target="_blank" rel="noopener" class="hover:text-base-content transition-colors">LinkedIn</a>
-            <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ isCopied ? 'Copied!' : email }}</button>
+            <button class="hover:text-base-content transition-colors cursor-pointer" @click="copyEmail">{{ isCopied ? t('social.copied') : email }}</button>
+            <button class="hover:text-base-content transition-colors cursor-pointer" @click="toggleLocale">{{ t('locale.switch') }}</button>
           </div>
         </div>
       </main>
@@ -105,7 +119,7 @@ const navItems = [
       class="bg-base-100 rounded-lg shadow-md hover:bg-base-300/50 transition-colors"
     >
       <component :is="item.icon" :size="20" />
-      <span class="dock-label">{{ item.label }}</span>
+      <span class="dock-label">{{ t(item.key) }}</span>
     </NuxtLink>
   </nav>
 </template>
