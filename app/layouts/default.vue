@@ -41,7 +41,7 @@ const navItems = [
   <div class="h-dvh flex flex-col md:flex-row bg-base-200 overflow-hidden">
 
     <aside
-      class="hidden md:flex flex-col bg-base-200 shrink-0 transition-[width] duration-300 ease-in-out"
+      class="hidden md:flex flex-col shrink-0 transition-[width] duration-300 ease-in-out"
       :class="isExpanded ? 'w-64' : 'w-16'"
     >
       <div class="flex flex-col flex-1 p-3 pr-0 pb-6 gap-8">
