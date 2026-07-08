@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Github, Play } from 'lucide-vue-next'
+import { Github, Play } from '@lucide/vue'
 
 const { t } = useLocale()
 

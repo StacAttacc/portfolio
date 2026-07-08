@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages, Sun, Moon } from 'lucide-vue-next'
+import { House, User, FolderOpen, PanelLeftOpen, PanelLeftClose, Github, Linkedin, Mail, Languages, Sun, Moon } from '@lucide/vue'
 
 const { locale, t, toggleLocale } = useLocale()
 const { theme, toggleTheme } = useTheme()
