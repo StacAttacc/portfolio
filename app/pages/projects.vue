@@ -1,4 +1,11 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Projects — Full-stack web developer',
+  description: 'Web apps, internal tools, and a self-hosted Kubernetes homelab. Built with React, Vue, Spring Boot, .NET, and more.',
+  ogTitle: 'Projects — Full-stack web developer',
+  ogDescription: 'Web apps, internal tools, and a self-hosted Kubernetes homelab. Built with React, Vue, Spring Boot, .NET, and more.',
+})
+
 import allProjects from '~~/data/projects.json'
 
 const projects = [...allProjects].sort((a, b) => Number(b.isDeployed) - Number(a.isDeployed))

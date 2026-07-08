@@ -2,7 +2,7 @@
   <div class="w-full max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-8 py-12">
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-bold">About me</h1>
-      <a href="/cv.pdf" download class="bg-base-100 rounded-lg shadow-md px-4 py-2 text-sm font-medium hover:bg-base-200 transition-colors">Download CV</a>
+      <a href="/SensiniValitianaCV_EN.pdf" download class="bg-base-100 rounded-lg shadow-md px-4 py-2 text-sm font-medium hover:bg-base-200 transition-colors">Download CV</a>
     </div>
 
     <div class="space-y-3 text-base-content/80 leading-relaxed mb-12">
@@ -64,6 +64,13 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'About — Full-stack web developer',
+  description: 'Full-stack developer with experience in web apps and self-hosted infrastructure. Interned at EnJoySocial and Services Conseils Sensaroli Inc.',
+  ogTitle: 'About — Full-stack web developer',
+  ogDescription: 'Full-stack developer with experience in web apps and self-hosted infrastructure. Interned at EnJoySocial and Services Conseils Sensaroli Inc.',
+})
+
 const languages = ['TypeScript', 'JavaScript', 'Python', 'Java', 'C#', 'SQL']
 const frontend = ['React', 'Next.js', 'Vue', 'Nuxt', 'Angular', 'Tailwind CSS']
 const backend = ['Spring Boot', 'FastAPI', '.NET', 'Node.js']
