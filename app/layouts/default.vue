@@ -38,7 +38,7 @@ const navItems = [
 </script>
 
 <template>
-  <div class="h-screen flex flex-col md:flex-row bg-base-200">
+  <div class="h-dvh flex flex-col md:flex-row bg-base-200 overflow-hidden">
 
     <aside
       class="hidden md:flex flex-col bg-base-200 shrink-0 transition-[width] duration-300 ease-in-out"
