@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio site for Sensini Valitiana. Built with Nuxt 4, Tailwind CSS v4, and DaisyUI v5.
 
-## Setup
+## Features
 
-Make sure to install dependencies:
+- English / French toggle (no URL changes)
+- Light / dark mode
+- Downloadable CV in both languages
+- Responsive layout: collapsible sidebar on desktop, bottom dock on mobile
+- Deployed on Vercel
+
+## Stack
+
+- [Nuxt 4](https://nuxt.com)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [DaisyUI v5](https://daisyui.com)
+- [@lucide/vue](https://lucide.dev)
+
+## Dev
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
