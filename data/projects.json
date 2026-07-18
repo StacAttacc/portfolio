@@ -33,6 +33,17 @@
     "isDeployed": true
   },
   {
+    "title": "OpenPayrun",
+    "shortDescription": "Open-source Quebec payroll deductions calculator. Computes QPP, EI, QPIP, and federal + provincial income tax using the official CRA and Revenu Québec formula method.",
+    "shortDescriptionFr": "Calculateur open-source de retenues à la source pour la paie québécoise. Calcule RRQ, AE, RQAP et l'impôt fédéral et provincial selon la méthode des formules officielle de l'ARC et Revenu Québec.",
+    "description": "A public Quebec payroll deductions calculator built on the formula method (T4127 / TP-1015.F) — the CRA and Revenu Québec approved alternative to payroll tables. Computes QPP (tier 1 & 2), EI, QPIP, federal and provincial income tax, and employer contributions for any pay period. Rate sets are managed through an admin UI and stored in SQL Server. Deployed on a self-hosted Kubernetes cluster via Tailscale Funnel.",
+    "descriptionFr": "Calculateur public de retenues à la source pour la paie québécoise, basé sur la méthode des formules (T4127 / TP-1015.F) — l'alternative aux tables de retenues reconnue par l'ARC et Revenu Québec. Calcule RRQ (palier 1 & 2), AE, RQAP, impôt fédéral et provincial, et les cotisations employeur pour toute période de paie. Les jeux de taux sont gérés via une interface d'administration et stockés dans SQL Server. Déployé sur un cluster Kubernetes auto-hébergé via Tailscale Funnel.",
+    "stack": ["Angular", "TypeScript", "C#", ".NET", "SQL Server", "Kubernetes"],
+    "liveLink": "https://open-payrun.vercel.app",
+    "githubLink": "https://github.com/StacAttacc/OpenPayrun",
+    "isDeployed": true
+  },
+  {
     "title": "Payroll",
     "shortDescription": "Internal payroll management tool built during an internship at Services Conseils Sensaroli Inc. to replace QuickBooks. Handles tax calculations and tracks every payment: who was paid, when, and how much.",
     "shortDescriptionFr": "Outil interne de gestion de paie développé lors d'un stage chez Services Conseils Sensaroli Inc. pour remplacer QuickBooks. Gère les calculs de taxes et trace chaque paiement : qui a été payé, quand et combien.",
